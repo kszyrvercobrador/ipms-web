@@ -1,8 +1,12 @@
 <template>
-  <v-app dark>
-    <v-app-bar :clipped-left="clipped" fixed app dark color="primary">
-      <v-toolbar-title v-text="title" />
+  <v-app>
+    <v-app-bar fixed app dark color="primary">
+      <v-toolbar-title> IP Address Management Solution </v-toolbar-title>
       <v-spacer />
+      <v-btn text @click="logout">
+        <v-icon left> mdi-logout </v-icon>
+        Logout
+      </v-btn>
     </v-app-bar>
     <v-main>
       <v-container>
@@ -14,28 +18,13 @@
 
 <script>
 export default {
-  data() {
-    return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/',
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire',
-        },
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'IP Address Management Solution',
-    }
+  name: 'DefaultLayout',
+  middleware: 'auth',
+
+  methods: {
+    logout() {
+      this.$auth.logout()
+    },
   },
 }
 </script>
