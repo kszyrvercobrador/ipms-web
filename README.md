@@ -3,8 +3,13 @@
 ## Build Setup
 
 ```bash
+# Copy .env.example to .env
+
 # install dependencies
 $ npm install
+
+# Run build first
+$ npm run build
 
 # serve with hot reload at localhost:3000
 $ npm run dev
