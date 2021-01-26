@@ -3,6 +3,16 @@
     <v-app-bar fixed app dark color="primary">
       <v-toolbar-title> IP Address Management Solution </v-toolbar-title>
       <v-spacer />
+      <v-btn text to="/" class="mr-2">
+        <v-icon left> mdi-format-list-checkbox </v-icon>
+        IP Addresses
+      </v-btn>
+
+      <v-btn text to="/activity-logs" class="mr-2">
+        <v-icon left> mdi-format-list-text </v-icon>
+        Activity Logs
+      </v-btn>
+
       <v-btn text @click="logout">
         <v-icon left> mdi-logout </v-icon>
         Logout
